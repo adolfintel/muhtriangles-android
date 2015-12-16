@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Muh Triangles</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="gradientMode">Smooth gradient</string>
+
+    <string name="gradientSubtle">Gradient intensity</string>
+    <string-array name="gradientSubtle_titles">
+        <item>Extremely intense</item>
+        <item>Very intense</item>
+        <item>Intense</item>
+        <item>Normal</item>
+        <item>Subtle</item>
+        <item>Very subtle</item>
+    </string-array>
+    <string-array name="gradientSubtle_values">
+        <item>5</item>
+        <item>0</item>
+        <item>3</item>
+        <item>2</item>
+        <item>4</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="gradientType">Gradient type</string>
+    <string-array name="gradientType_titles">
+        <item>Radial</item>
+        <item>Vertical</item>
+        <item>Horizontal</item>
+        <item>Diagonal 1</item>
+        <item>Diagonal 2</item>
+        <item>Random</item>
+    </string-array>
+    <string-array name="gradientType_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string name="gradientInvert">Invert gradient</string>
+
+    <string name="hueMode">Color</string>
+    <string-array name="hueMode_titles">
+        <item>Random</item>
+        <item>Cycle 1 year</item>
+        <item>Cycle 24 hours</item>
+        <item>Cycle 12 hours</item>
+        <item>Cycle 1 hour</item>
+        <item>Cycle 1 minute</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Yellow</item>
+        <item>Lime</item>
+        <item>Green</item>
+        <item>Emerald</item>
+        <item>Aqua</item>
+        <item>Sky Blue</item>
+        <item>Azure</item>
+        <item>Blue</item>
+        <item>Deep Blue</item>
+        <item>Violet</item>
+        <item>Indigo</item>
+        <item>Purpureus</item>
+        <item>Purple</item>
+        <item>Pink</item>
+        <item>Reddish Pink</item>
+    </string-array>
+    <string-array name="hueMode_values">
+        <item>r</item>
+        <item>c5</item>
+        <item>c0</item>
+        <item>c1</item>
+        <item>c2</item>
+        <item>c3</item>
+        <item>0</item>
+        <item>26</item>
+        <item>58</item>
+        <item>90</item>
+        <item>120</item>
+        <item>148</item>
+        <item>177</item>
+        <item>200</item>
+        <item>210</item>
+        <item>220</item>
+        <item>243</item>
+        <item>263</item>
+        <item>272</item>
+        <item>288</item>
+        <item>304</item>
+        <item>322</item>
+        <item>342</item>
+    </string-array>
+
+
+    <string name="satMode">Saturation</string>
+    <string-array name="satMode_titles">
+        <item>Black and White</item>
+        <item>Desaturated</item>
+        <item>Slightly desaturated</item>
+        <item>Normal</item>
+        <item>Slightly oversaturated</item>
+        <item>Oversaturated</item>
+        <item>Battery indicator</item>
+    </string-array>
+    <string-array name="satMode_values">
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>0</item>
+        <item>6</item>
+        <item>4</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="lumaMode">Lightness</string>
+    <string-array name="lumaMode_titles">
+        <item>Darker</item>
+        <item>Slightly darker</item>
+        <item>Normal</item>
+        <item>Slightly brighter</item>
+        <item>Brighter</item>
+        <item>Battery indicator</item>
+    </string-array>
+    <string-array name="lumaMode_values">
+        <item>2</item>
+        <item>4</item>
+        <item>0</item>
+        <item>5</item>
+        <item>3</item>
+        <item>1</item>
+    </string-array>
+
+    <string name="touchReact">Touch animation</string>
+
+    <string name="instability">Animation intensity</string>
+    <string-array name="instability_titles">
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Glitch</item>
+    </string-array>
+    <string-array name="instability_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string name="speed">Animation speed</string>
+    <string-array name="speed_titles">
+        <item>Very slow</item>
+        <item>Slow</item>
+        <item>Normal</item>
+        <item>Fast</item>
+        <item>Very fast</item>
+        <item>Fastest</item>
+    </string-array>
+    <string-array name="speed_values">
+        <item>5</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="outline">Outline color</string>
+    <string-array name="outline_titles">
+        <item>White</item>
+        <item>Black</item>
+    </string-array>
+    <string-array name="outline_values">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="outlineOnOff">Outline</string>
+
+    <string name="density">Number of triangles</string>
+    <string-array name="density_titles">
+        <item>Low</item>
+        <item>Normal</item>
+        <item>High</item>
+        <item>Higher</item>
+        <item>Very high</item>
+        <item>Ultra high</item>
+        <item>Insane</item>
+    </string-array>
+    <string-array name="density_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="fpsLimit">FPS Limit</string>
+    <string-array name="fpsLimit_titles">
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>Device default</item>
+    </string-array>
+    <string-array name="fpsLimit_values">
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+        <item>0</item>
+    </string-array>
+
+    <string name="antialiasing">Antialiasing (WILL RESTART!)</string>
+    <string name="antialiasing_ifsupported">Improves image quality\nNot supported by all devices</string>
+
+    <string name="outlineThickness">Outline thickness</string>
+    <string-array name="outlineThickness_titles">
+        <item>Hairline</item>
+        <item>Thin</item>
+        <item>Normal</item>
+        <item>Thick</item>
+        <item>Bold</item>
+    </string-array>
+    <string-array name="outlineThickness_values">
+        <item>3</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>4</item>
+    </string-array>
+
+    <string name="algorithm">Model</string>
+    <string-array name="algorithm_titles">
+        <item>Hexagons</item>
+        <item>Mesh</item>
+    </string-array>
+    <string-array name="algorithm_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+
+<string name="minminfagTitle">Ad blocker detected</string>
+<string name="minminfag1">You\'re blocking ads :(</string>
+<string name="minminfag2">I know, I know, ads are annoying, I use ad blockers too, but it\'s the only way small devs like me can get some money</string>
+<string name="minminfag3">(Don\'t worry, we won\'t bother you again)</string>
+<string name="minminfag4">GOT IT</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp" android:orientation="vertical">
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        ads:adUnitId="ca-app-pub-6263530127209064/7437904232"
+        ads:adSize="BANNER"
+        />
+</LinearLayout>
