@@ -97,7 +97,7 @@ public class LiveWallpaper extends AndroidLiveWallpaperService{
             int outline=sp.getBoolean("outlineOnOff",true)?Integer.parseInt(sp.getString("outline", "1")):0;
             int speed=Integer.parseInt(sp.getString("speed", "1"));
             int density=Integer.parseInt(sp.getString("density", "1"));
-            int fpsLimit=Integer.parseInt(sp.getString("fpsLimit", "1"));
+            int fpsLimit=Integer.parseInt(sp.getString("maxFps", "20"));
             int outlineThickness=Integer.parseInt(sp.getString("outlineThickness", "1"));
             int algorithm=Integer.parseInt(sp.getString("algorithm","0"));
             setPreferences(gradientMode?MyGdxGame.GRADIENTMODE_SMOOTH:GRADIENTMODE_OLD, gradientSubtle, gradientType, gradientInvert?MyGdxGame.GRADIENTINVERT_YES:MyGdxGame.GRADIENTINVERT_NO, hueMode,customHue, satMode, lumaMode, touchReact?MyGdxGame.TOUCHREACT_ANIMATE:MyGdxGame.TOUCHREACT_NOTHING,speed,density,instability, outline,outlineThickness,algorithm,fpsLimit);

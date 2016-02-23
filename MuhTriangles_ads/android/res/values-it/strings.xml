@@ -203,17 +203,17 @@
         <item>6</item>
     </string-array>
 
-    <string name="fpsLimit">Limite FPS</string>
-    <string-array name="fpsLimit_titles">
+    <string name="maxFps">Limite FPS</string>
+    <string-array name="maxFps_titles">
         <item>15</item>
         <item>20</item>
         <item>25</item>
         <item>30</item>
         <item>40</item>
         <item>60</item>
-        <item>Default dispositivo</item>
+        <item>Massimo</item>
     </string-array>
-    <string-array name="fpsLimit_values">
+    <string-array name="maxFps_values">
         <item>15</item>
         <item>20</item>
         <item>25</item>

@@ -125,11 +125,11 @@
         android:positiveButtonText="@null" />
 
     <ListPreference
-        android:key="fpsLimit"
-        android:title="@string/fpsLimit"
-        android:defaultValue="-1"
-        android:entries="@array/fpsLimit_titles"
-        android:entryValues="@array/fpsLimit_values"
+        android:key="maxFps"
+        android:title="@string/maxFps"
+        android:defaultValue="20"
+        android:entries="@array/maxFps_titles"
+        android:entryValues="@array/maxFps_values"
         android:negativeButtonText="@null"
         android:positiveButtonText="@null" />
 
