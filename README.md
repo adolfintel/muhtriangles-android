@@ -1,5 +1,5 @@
 # Muh Triangles Live Wallpaper 
-A Live Wallpaper for Android that brings Colorful and Animated Triangles, with lots of options that you can tweak.
+A Live Wallpaper for Android that brings Colorful and Animated Triangles to your home screen, with lots of options that you can tweak.
  
 Uses libGDX
  
@@ -7,9 +7,11 @@ Uses libGDX
 [Download from Google Play]( https://play.google.com/store/apps/details?id=com.dosse.muhtriangles.gdx.android)
  
 ## Compatibility
-Android 4.0 and up (x86 and ARM)
+Android 4.0.3 and up (x86 and ARM)
 
 ## Screenshots
+[![Screenshot](http://adolfintel.com/muhTriangles/19p.png)](http://adolfintel.com/muhTriangles/19.png)
+[![Screenshot](http://adolfintel.com/muhTriangles/18p.png)](http://adolfintel.com/muhTriangles/18.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/1p.png)](http://adolfintel.com/muhTriangles/1.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/2p.png)](http://adolfintel.com/muhTriangles/2.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/3p.png)](http://adolfintel.com/muhTriangles/3.png)
@@ -23,6 +25,7 @@ Android 4.0 and up (x86 and ARM)
 [![Screenshot](http://adolfintel.com/muhTriangles/11p.png)](http://adolfintel.com/muhTriangles/11.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/12p.png)](http://adolfintel.com/muhTriangles/12.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/13p.png)](http://adolfintel.com/muhTriangles/13.png)
+[![Screenshot](http://adolfintel.com/muhTriangles/20p.png)](http://adolfintel.com/muhTriangles/20.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/14p.png)](http://adolfintel.com/muhTriangles/14.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/15p.png)](http://adolfintel.com/muhTriangles/15.png)
 [![Screenshot](http://adolfintel.com/muhTriangles/16p.png)](http://adolfintel.com/muhTriangles/16.png)
@@ -31,12 +34,10 @@ Android 4.0 and up (x86 and ARM)
 ## Loading the project
 Download the source code and load the project into Android Studio.
 
-Android SDK 14 and 23 must be installed.
-
-It should be possible to build it using gradle alone, without Android Studio, but I haven't tried.
+Android SDK 15 and 23 must be installed.
 
 ## License
-Copyright (C) 2015 Federico Dossena
+Copyright (C) 2017 Federico Dossena
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

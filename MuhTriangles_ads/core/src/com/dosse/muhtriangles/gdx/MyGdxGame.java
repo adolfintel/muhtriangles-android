@@ -19,12 +19,12 @@ public abstract class MyGdxGame extends ApplicationAdapter{
     private static final float DAMPEN=3;
 
     public static final int GRADIENTMODE_OLD=0, GRADIENTMODE_SMOOTH=1;
-    public static final int GRADIENTSUBTLE_NO=0, GRADIENTSUBTLE_BARELY=3, GRADIENTSUBTLE_SLIGHTLY=2, GRADIENTSUBTLE_MODERATE=4, GRADIENTSUBTLE_VERY=1, GRADIENTSUBTLE_NOTATALL=5;
-    public static final int GRADIENTTYPE_RADIAL=0, GRADIENTTYPE_VERTICAL=1, GRADIENTTYPE_HORIZONTAL=2, GRADIENTTYPE_DIAGONAL1=3, GRADIENTTYPE_DIAGONAL2=4, GRADIENTTYPE_RANDOM=5;
+    public static final int GRADIENTSUBTLE_NO=0, GRADIENTSUBTLE_BARELY=3, GRADIENTSUBTLE_SLIGHTLY=2, GRADIENTSUBTLE_MODERATE=4, GRADIENTSUBTLE_VERY=1, GRADIENTSUBTLE_NOTATALL=5, GRADIENTSUBTLE_EXTREMELY=6;
+    public static final int GRADIENTTYPE_RADIAL=0, GRADIENTTYPE_VERTICAL=1, GRADIENTTYPE_HORIZONTAL=2, GRADIENTTYPE_DIAGONAL1=3, GRADIENTTYPE_DIAGONAL2=4, GRADIENTTYPE_RANDOM=5, GRADIENTTYPE_DIAGONAL3=6, GRADIENTTYPE_DIAGONAL4=7;
     public static final int GRADIENTINVERT_NO=0, GRADIENTINVERT_YES=1;
-    public static final int HUEMODE_1Y=5, HUEMODE_24H=0, HUEMODE_12H=1, HUEMODE_1H=2, HUEMODE_1M=3, HUEMODE_FIXED=4;
+    public static final int HUEMODE_1Y=5, HUEMODE_1W=7, HUEMODE_24H=0, HUEMODE_12H=1, HUEMODE_1H=2, HUEMODE_1M=3, HUEMODE_FIXED=4, HUEMODE_ARLEQUIN=6;
     public static final int SATMODE_NORMAL=0, SATMODE_BATTERY=1, SATMODE_BW=2, SATMODE_LESS=3, SATMODE_MORE=4, SATMODE_SLIGHTLYLESS=5, SATMODE_SLIGHTLYMORE=6;
-    public static final int LUMAMODE_NORMAL=0, LUMAMODE_BATTERY=1, LUMAMODE_DARKER=2, LUMAMODE_BRIGHTER=3, LUMAMODE_SLIGHTLYDARKER=4, LUMAMODE_SLIGHTLYBRIGHTER=5;
+    public static final int LUMAMODE_NORMAL=0, LUMAMODE_BATTERY=1, LUMAMODE_DARKER=2, LUMAMODE_BRIGHTER=3, LUMAMODE_SLIGHTLYDARKER=4, LUMAMODE_SLIGHTLYBRIGHTER=5, LUMAMODE_BITDARKER=6, LUMAMODE_MUCHBRIGHTER=7, LUMAMODE_MUCHDARKER=8;
     public static final int TOUCHREACT_NOTHING=0, TOUCHREACT_ANIMATE=1;
     public static final int INSTABILITY_LOW=0, INSTABILITY_NORMAL=1, INSTABILITY_HIGH=2, INSTABILITY_GLITCH=3;
     public static final int OUTLINE_OFF=0, OUTLINE_WHITE=1, OUTLINE_BLACK=2;
@@ -105,7 +105,7 @@ public abstract class MyGdxGame extends ApplicationAdapter{
             this.p2 = p2;
             this.p3 = p3;
             if(GRADIENTMODE==GRADIENTMODE_SMOOTH) {
-                h = (p1.h + p2.h + p3.h) / 3;
+                h = HUEMODE==HUEMODE_ARLEQUIN?p1.h:(p1.h + p2.h + p3.h) / 3;
                 s = (p1.s + p2.s + p3.s) / 3;
                 l = (p1.l + p2.l + p3.l) / 3;
             }else if(GRADIENTMODE==GRADIENTMODE_OLD){
@@ -165,20 +165,25 @@ public abstract class MyGdxGame extends ApplicationAdapter{
                 xf=(x-3)*SX;
                 yf=(y-2)*SY;
                 if(GRADIENTTYPE==GRADIENTTYPE_RADIAL) f= (float) (1-Math.sqrt(Math.pow(((NX * SX) / 2) - xf, 2) + Math.pow(((NY * SY) / 2) - yf, 2))); else
-                if(GRADIENTTYPE==GRADIENTTYPE_HORIZONTAL) f= 1-xf*(width<height?width/height:height/width); else
-                if(GRADIENTTYPE==GRADIENTTYPE_VERTICAL) f= 1-yf*(width<height?width/height:height/width);else
-                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL1) f= ((1-xf*(width<height?width/height:height/width))+(1-yf*(width<height?width/height:height/width)))/2; else
-                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL2) f= ((xf*(width<height?width/height:height/width))+(1-yf*(width<height?width/height:height/width)))/2; else
+                if(GRADIENTTYPE==GRADIENTTYPE_HORIZONTAL) f= (1-xf)*(width<height?width/height:height/width); else
+                if(GRADIENTTYPE==GRADIENTTYPE_VERTICAL) f= (1-yf)*(width<height?width/height:height/width);else
+                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL1) f= (((1-xf)*(width<height?width/height:height/width))+((1-yf)*(width<height?width/height:height/width)))/2; else
+                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL2) f= ((xf*(width<height?width/height:height/width))+((1-yf)*(width<height?width/height:height/width)))/2; else
+                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL3) f= (((1-xf)*(width<height?width/height:height/width))+(yf*(width<height?width/height:height/width)))/2; else
+                if(GRADIENTTYPE==GRADIENTTYPE_DIAGONAL4) f= ((xf*(width<height?width/height:height/width))+(yf*(width<height?width/height:height/width)))/2; else
                 if(GRADIENTTYPE==GRADIENTTYPE_RANDOM) f=(float)(0.3+Math.random()*0.7);
 
                 if(GRADIENTSUBTLE==GRADIENTSUBTLE_VERY) f=neutrF*0.5f+f*0.5f; else
                 if(GRADIENTSUBTLE==GRADIENTSUBTLE_SLIGHTLY) f=neutrF*0.2f+f*0.8f; else
                 if(GRADIENTSUBTLE==GRADIENTSUBTLE_BARELY) f=neutrF*0.1f+f*0.9f; else
                 if(GRADIENTSUBTLE==GRADIENTSUBTLE_MODERATE) f=neutrF*0.35f+f*0.65f; else
-                if(GRADIENTSUBTLE==GRADIENTSUBTLE_NOTATALL) f=neutrF*-0.2f+f*1.2f;
-                f=f<0?0:f>1?1:f;
+                if(GRADIENTSUBTLE==GRADIENTSUBTLE_NOTATALL) f=neutrF*-0.2f+f*1.2f; else
+                if(GRADIENTSUBTLE==GRADIENTSUBTLE_EXTREMELY) f=neutrF*0.7f+f*0.3f;
+
                 if(GRADIENTINVERT==GRADIENTINVERT_YES) f=1-f;
-                grid[y][x]=new Point((float)((x-3-Math.random()/dampen)*SX),(float)((y-2-Math.random()/dampen)*SY),HUEMODE==HUEMODE_FIXED?CUSTOMHUE:0,40+60*f,5+60*f+15*f*f);
+                f=f<0?0:f>1?1:f;
+
+                grid[y][x]=new Point((float)((x-3-Math.random()/dampen)*SX),(float)((y-2-Math.random()/dampen)*SY),HUEMODE==HUEMODE_ARLEQUIN?(float)(360*Math.random()):HUEMODE==HUEMODE_FIXED?CUSTOMHUE:0,40+60*f,5+60*f+15*f*f);
             }
         }
         if(ALGORITHM==ALGORITHM_HEXAGONS){
@@ -223,6 +228,7 @@ public abstract class MyGdxGame extends ApplicationAdapter{
         lastRenderT=System.nanoTime();
 
         double time=System.currentTimeMillis()/1000.0, day=0;
+        if(HUEMODE==HUEMODE_1W) day=time/604800.0; else
         if(HUEMODE==HUEMODE_24H) day=time/86400.0; else
         if(HUEMODE==HUEMODE_12H) day=time/43200.0; else
         if(HUEMODE==HUEMODE_1H) day=time/3600.0; else
@@ -252,11 +258,11 @@ public abstract class MyGdxGame extends ApplicationAdapter{
             t.p3.cY=(float)(((SY/dampen)*Math.sin(time * t.p3.tmul)+t.p3.y)*h);
         }
         for(Triangle t:triangles){
-            hue=(t.h+(HUEMODE==HUEMODE_12H||HUEMODE==HUEMODE_24H||HUEMODE==HUEMODE_1H||HUEMODE==HUEMODE_1M||HUEMODE==HUEMODE_1Y?hueOffset:0))%360;
+            hue=(t.h+(HUEMODE==HUEMODE_1W||HUEMODE==HUEMODE_12H||HUEMODE==HUEMODE_24H||HUEMODE==HUEMODE_1H||HUEMODE==HUEMODE_1M||HUEMODE==HUEMODE_1Y?hueOffset:0))%360;
             luma=t.l;
             sat=t.s;
             sat*=SATMODE==SATMODE_BW?0:SATMODE==SATMODE_LESS?0.5f:SATMODE==SATMODE_MORE?1.3f:SATMODE==SATMODE_SLIGHTLYLESS?0.7f:SATMODE==SATMODE_SLIGHTLYMORE?1.15f:SATMODE==SATMODE_BATTERY?battery:1;
-            luma*=LUMAMODE==LUMAMODE_DARKER?0.7f:LUMAMODE==LUMAMODE_BRIGHTER?1.2f:LUMAMODE==LUMAMODE_SLIGHTLYDARKER?0.85f:LUMAMODE==LUMAMODE_SLIGHTLYBRIGHTER?1.1f:LUMAMODE==LUMAMODE_BATTERY?(0.35f+0.65f*battery):1;
+            luma*=LUMAMODE==LUMAMODE_MUCHDARKER?0.5f:LUMAMODE==LUMAMODE_MUCHBRIGHTER?1.35f:LUMAMODE==LUMAMODE_BITDARKER?0.92f:LUMAMODE==LUMAMODE_DARKER?0.7f:LUMAMODE==LUMAMODE_BRIGHTER?1.2f:LUMAMODE==LUMAMODE_SLIGHTLYDARKER?0.85f:LUMAMODE==LUMAMODE_SLIGHTLYBRIGHTER?1.1f:LUMAMODE==LUMAMODE_BATTERY?(0.35f+0.65f*battery):1;
             color=hslToRgb(hue,sat>100?100:sat<0?0:sat,luma>100?100:luma<0?0:luma);
             tris.setColor(color[0],color[1],color[2],1);
             tris.triangle(t.p1.cX,t.p1.cY,t.p2.cX,t.p2.cY,t.p3.cX,t.p3.cY);
