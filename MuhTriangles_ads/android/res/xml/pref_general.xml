@@ -1,7 +1,5 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <com.dosse.muhtriangles.gdx.android.AdPreference android:layout="@layout/ad_layout"/>
-
     <ListPreference
         android:key="satMode"
         android:title="@string/satMode"

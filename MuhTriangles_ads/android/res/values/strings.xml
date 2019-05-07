@@ -276,13 +276,6 @@
         <item>1</item>
     </string-array>
 
-
-    <string name="minminfagTitle">Ad blocker detected</string>
-    <string name="minminfag1">You\'re blocking ads :(</string>
-    <string name="minminfag2">I know, I know, ads are annoying, I use ad blockers too, but it\'s the only way small devs like me can get some money</string>
-    <string name="minminfag3">(Don\'t worry, we won\'t bother you again)</string>
-    <string name="minminfag4">GOT IT</string>
-
     <string name="title_activity_main">Muh Triangles</string>
     <string name="intro">Welcome to Muh Triangles</string>
     <string name="intro2">Muh Triangles is a customizable live wallpaper for Android. To begin, set Muh Triangles as your wallpaper.</string>

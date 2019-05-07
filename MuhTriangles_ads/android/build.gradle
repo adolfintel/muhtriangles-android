@@ -1,6 +1,6 @@
 android {
-    buildToolsVersion "23.0.1"
-    compileSdkVersion 23
+    buildToolsVersion '28.0.3'
+    compileSdkVersion 28
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -11,8 +11,12 @@ android {
             assets.srcDirs = ['assets']
             jniLibs.srcDirs = ['libs']
         }
-
-        instrumentTest.setRoot('tests')
+    }
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 28
+    }
+    productFlavors {
     }
 }
 // called every time gradle gets executed, takes the native dependencies of
@@ -109,7 +113,7 @@ idea {
         }
     }
 }
+
 dependencies {
-    compile 'com.android.support:support-v4:23.1.0'
-    compile 'com.google.android.gms:play-services-ads:8.1.0'
+    implementation 'com.android.support:support-v4:23.4.0'
 }
