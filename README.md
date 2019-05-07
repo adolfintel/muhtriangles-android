@@ -4,7 +4,8 @@ A Live Wallpaper for Android that brings Colorful and Animated Triangles to your
 Uses libGDX
  
 ## Download
-[Download from Google Play]( https://play.google.com/store/apps/details?id=com.dosse.muhtriangles.gdx.android)
+[Download from Google Play]( https://play.google.com/store/apps/details?id=com.dosse.muhtriangles.gdx.android)  
+[Download APK]( https://downloads.fdossena.com/geth.php?r=muhtris-apk)
  
 ## Compatibility
 Android 4.0.3 and up (x86 and ARM)
@@ -37,7 +38,7 @@ Download the source code and load the project into Android Studio.
 Android SDK 15 and 23 must be installed.
 
 ## License
-Copyright (C) 2017 Federico Dossena
+Copyright (C) 2015-2017 Federico Dossena
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
