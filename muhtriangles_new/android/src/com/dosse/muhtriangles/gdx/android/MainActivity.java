@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -23,9 +24,7 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 Intent i=new Intent();
                 i.setAction(WallpaperManager.ACTION_CHANGE_LIVE_WALLPAPER);
-                String p = LiveWallpaper.class.getPackage().getName();
-                String c = LiveWallpaper.class.getCanonicalName();
-                i.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT, new ComponentName(p, c));
+                i.putExtra(WallpaperManager.EXTRA_LIVE_WALLPAPER_COMPONENT, new ComponentName(MainActivity.this,LiveWallpaper.class));
                 startActivityForResult(i, 0);
                 finish();
             }
