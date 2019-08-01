@@ -35,10 +35,10 @@ Android 4.0.3 and up (x86 and ARM)
 ## Loading the project
 Download the source code and load the project into Android Studio.
 
-Android SDK 15 and 23 must be installed.
+Android SDK 15 and 28 must be installed.
 
 ## License
-Copyright (C) 2015-2017 Federico Dossena
+Copyright (C) 2015-2019 Federico Dossena
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

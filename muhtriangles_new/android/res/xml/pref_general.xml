@@ -1,0 +1,141 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="satMode"
+        android:title="@string/satMode"
+        android:defaultValue="6"
+        android:entries="@array/satMode_titles"
+        android:entryValues="@array/satMode_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="hueMode"
+        android:title="@string/hueMode"
+        android:defaultValue="c0"
+        android:entries="@array/hueMode_titles"
+        android:entryValues="@array/hueMode_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="lumaMode"
+        android:title="@string/lumaMode"
+        android:defaultValue="4"
+        android:entries="@array/lumaMode_titles"
+        android:entryValues="@array/lumaMode_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <SwitchPreference
+        android:key="outlineOnOff"
+        android:title="@string/outlineOnOff"
+        android:defaultValue="true"
+        />
+
+    <ListPreference
+        android:key="outline"
+        android:title="@string/outline"
+        android:defaultValue="2"
+        android:entries="@array/outline_titles"
+        android:entryValues="@array/outline_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+
+
+    <ListPreference
+        android:key="outlineThickness"
+        android:title="@string/outlineThickness"
+        android:defaultValue="3"
+        android:entries="@array/outlineThickness_titles"
+        android:entryValues="@array/outlineThickness_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="gradientType"
+        android:title="@string/gradientType"
+        android:defaultValue="5"
+        android:entries="@array/gradientType_titles"
+        android:entryValues="@array/gradientType_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="gradientSubtle"
+        android:title="@string/gradientSubtle"
+        android:defaultValue="1"
+        android:entries="@array/gradientSubtle_titles"
+        android:entryValues="@array/gradientSubtle_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <SwitchPreference
+        android:key="gradientMode"
+        android:title="@string/gradientMode"
+        android:defaultValue="true" />
+
+    <SwitchPreference
+        android:key="gradientInvert"
+        android:title="@string/gradientInvert"
+        android:defaultValue="false" />
+
+    <ListPreference
+        android:key="speed"
+        android:title="@string/speed"
+        android:defaultValue="2"
+        android:entries="@array/speed_titles"
+        android:entryValues="@array/speed_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <SwitchPreference
+        android:key="touchReact"
+        android:title="@string/touchReact"
+        android:defaultValue="true" />
+
+    <ListPreference
+        android:key="instability"
+        android:title="@string/instability"
+        android:defaultValue="0"
+        android:entries="@array/instability_titles"
+        android:entryValues="@array/instability_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="density"
+        android:title="@string/density"
+        android:defaultValue="2"
+        android:entries="@array/density_titles"
+        android:entryValues="@array/density_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="algorithm"
+        android:title="@string/algorithm"
+        android:defaultValue="1"
+        android:entries="@array/algorithm_titles"
+        android:entryValues="@array/algorithm_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <ListPreference
+        android:key="maxFps"
+        android:title="@string/maxFps"
+        android:defaultValue="20"
+        android:entries="@array/maxFps_titles"
+        android:entryValues="@array/maxFps_values"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null" />
+
+    <SwitchPreference
+        android:key="antialiasing"
+        android:title="@string/antialiasing"
+        android:defaultValue="true"
+        android:summary="@string/antialiasing_ifsupported"
+        />
+
+</PreferenceScreen>
